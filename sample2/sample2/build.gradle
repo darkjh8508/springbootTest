@@ -34,6 +34,10 @@ dependencies {
 	// Model Mapper
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.0.0'
 
+	// IBM WATSON
+	implementation 'com.ibm.watson:ibm-watson:9.3.1'
+	implementation 'com.ibm.watson:assistant:9.3.1'
+
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	// MS-SQL
