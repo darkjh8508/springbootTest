@@ -1,23 +1,8 @@
 package com.example.sample2.common.watson;
 
-import com.ibm.cloud.sdk.core.security.Authenticator;
-import com.ibm.cloud.sdk.core.security.BasicAuthenticator;
-import com.ibm.watson.discovery.v1.Discovery;
-
 public class WatsonApi {
     public void watsonConnector() {
-        Authenticator authenticator = new BasicAuthenticator.Builder()
-                                                            .username("username")
-                                                            .password("password")
-                                                            .build();
 
-        Discovery service = new Discovery("2022-03-16", authenticator);
-
-        // Response<WorkspaceCollection> response = service.get
-
-        // WorkspaceCollection collection = response.getResult();
-
-        // System.out.println("My workspace : " + collection.getWorkspaces());
     }
 }
 
@@ -69,4 +54,29 @@ public static void main(String[] args) {
     MessageResponse response = service.message(options).execute();
     System.out.println(response);
 }
+*/
+
+/*
+String version = "2018-07-10";
+String username = "xxx";
+String password = "xxx";
+
+String workspaceId = "xxx";
+
+Assistant service = new Assistant(version);
+service.setUsernameAndPassword(username, password);
+
+InputData input = new InputData.Builder("Hi").build();
+
+// MessageOptions options = new
+// MessageOptions.Builder(workspaceId).input(input).build();
+MessageOptions options = new MessageOptions.Builder(workspaceId).build();
+
+// sync
+MessageResponse response = service.message(options).execute();
+System.err.println(response);
+
+System.err.println("---");
+
+System.err.println(response.getOutput().getText());
 */
